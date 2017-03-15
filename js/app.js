@@ -4,6 +4,8 @@ $(document).ready(function(){
 	microwave = document.getElementById("microwave");
 	homer = document.getElementById("homer-wrapper");
 
+	moveTheEyes();
+
 	element.addEventListener("click", function (e) {
 	    e.preventDefault;
 	    microwave.classList.remove("animated");
@@ -24,7 +26,6 @@ $(document).ready(function(){
 	}, false);
 
 });
-
 function rotate(domObject, i) {
 
 	setTimeout(function () {    //  call a 3s setTimeout when the loop is called
@@ -35,6 +36,7 @@ function rotate(domObject, i) {
       }
 		}, 5);
 };
+
 function delayedAnimation(domObject, i) {
 
 	setTimeout(function(){
@@ -51,6 +53,7 @@ function delayedAnimation(domObject, i) {
 		}
 	}, 1300);
 }
+
 function delayedPuke(i) {
 
 	setTimeout(function(){
@@ -70,6 +73,16 @@ function delayedPuke(i) {
 			delayedPuke(1);
 		}
 	}, 1800);
+}
+function moveTheEyes() {
+	setTimeout(function(){
+		$(".iris").each(function(){
+			$(this).animate({"left": "40px"}, 1200);
+			$(this).animate({"left": "-40px"}, 1200);
+			$(this).animate({"left": "0px"}, 1200);
+		});
+		moveTheEyes();
+	}, 5000);
 }
 jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
     this.each(function() {
