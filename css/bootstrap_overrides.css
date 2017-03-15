@@ -1,0 +1,47 @@
+#app {
+
+	background-color: #ccc;
+	border-radius: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#app .navbar {
+  background-color: #fff;
+}
+
+.navbar-brand {
+height: auto;
+}
+
+.navbar-brand img {
+height: 50px;
+}
+body {
+    background: #666;
+    font-family: Courier, Monospace;
+    padding: 30px;
+}
+
+html, body, .container-fluid {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  min-height:850px;
+}
+.navbar {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .navbar-nav>li>a {
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+  }
+  .navbar-nav>li:hover {
+    background-color: #eee;
+  }
+}

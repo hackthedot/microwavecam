@@ -1,1 +1,2 @@
-# microwavecam
+# microwavecam.news
+Astroids with a twist
