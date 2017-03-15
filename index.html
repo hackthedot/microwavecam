@@ -2,155 +2,161 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta charset="utf-8">
-	<title>Microwave Cam News</title>
-	<meta name="description" content="" />
-  	<meta name="keywords" content="" />
-	<meta name="robots" content="" />
+  <title>Microwave Cam News</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="" />
 
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-	<link href="./css/app.css" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/app.css" rel="stylesheet" />
 
-	<style type="text/css">
-		html, body, .container-fluid, #mapView {
-	      padding: 0;
-	      margin: 0;
-	      height: 100%;
-	      width: 100%;
-	    }
-	    .navbar {
-	    	margin-bottom: 0;
-	    }
-	    .mapOverride #mapView .esri-popup__main-container {
-	    	height: 500px;
-	    	width: 500px;
-	    	max-height: 500px;
-	    	max-width: 500px;
-	    }
-	</style>
+  <style type="text/css">
+  html, body, .container-fluid, #mapView {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .navbar {
+    margin-bottom: 0;
+  }
+  .mapOverride #mapView .esri-popup__main-container {
+    height: 500px;
+    width: 500px;
+    max-height: 500px;
+    max-width: 500px;
+  }
+  #mapView {
+    /*width: 75%;*/
+  }
+  #feed {
+    /*width: 24%;*/
+  }
+  </style>
 
-	<link rel="stylesheet" href="https://js.arcgis.com/4.3/esri/css/main.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.3/esri/css/main.css">
   <script src="https://js.arcgis.com/4.3/"></script>
   <script>
-    require([
-      "esri/WebMap",
-      "esri/views/MapView",
-      "esri/widgets/Legend",
-      "dojo/domReady!"
-    ], function(WebMap, MapView, Legend) {
+  require([
+    "esri/WebMap",
+    "esri/views/MapView",
+    "esri/widgets/Legend",
+    "dojo/domReady!"
+  ], function(WebMap, MapView, Legend) {
 
-      var webmap = new WebMap({
-        portalItem: {
-          id: "589ef7ea51094ae0a25e63a3837a8864"
-        }
-      });
-
-      var view = new MapView({
-        container: "mapView",
-        map: webmap,
-        zoom: 10
-      });
-
-      var legend = new Legend({
-        view: view
-      });
-
-      view.ui.add(legend, "top-right");
+    var webmap = new WebMap({
+      portalItem: {
+        id: "589ef7ea51094ae0a25e63a3837a8864"
+      }
     });
-   </script>
+
+    var view = new MapView({
+      container: "mapView",
+      map: webmap,
+      zoom: 10
+    });
+
+    var legend = new Legend({
+      view: view
+    });
+
+    view.ui.add(legend, "top-right");
+  });
+  </script>
 </head>
 <body class="mapOverride">
-	<div id="app" class="container-fluid">
+  <div id="app" class="container-fluid">
 
-		<nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
 
-	            <img src="./images/microwavecam-logo.svg" />
+            <img src="./images/microwavecam-logo.svg" />
 
-            </a>
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>
+
+    <div id="mapView"></div>
+    <div id="feed">
+      <h5>COOKING NOW!</h5>
+
+      <div class="homer-micro-wrapper">
+        <div id="homer-wrapper">
+          <div id="homer">
+            <div class="body">
+              <div class="head">
+                <div class="eyebrows">
+                  <div class="eyebrow"></div>
+                  <div class="eyebrow"></div>
+                </div>
+                <div class="eyes">
+                  <div class="eye"><div class="iris"></div></div>
+                  <div class="eye"><div class="iris"></div></div>
+                </div>
+                <div class="nose"></div>
+                <div class="beard">
+                  <div class="mouth"></div>
+                  <div class="chin"></div>
+                </div>
+              </div>
+              <div class="ears">
+                <div class="ear"></div>
+                <div class="ear"></div>
+              </div>
+              <div class="hair"><div></div></div>
+            </div>
           </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-      </nav>
-
-      <div id="mapView"></div>
-      <div id="feed">
-
-        <div class="homer-micro-wrapper">
-              <div id="homer-wrapper">
-                <div id="homer">
-                  <div class="body">
-                    <div class="head">
-                      <div class="eyebrows">
-                        <div class="eyebrow"></div>
-                        <div class="eyebrow"></div>
-                      </div>
-                      <div class="eyes">
-                        <div class="eye"><div class="iris"></div></div>
-                        <div class="eye"><div class="iris"></div></div>
-                      </div>
-                      <div class="nose"></div>
-                      <div class="beard">
-                        <div class="mouth"></div>
-                        <div class="chin"></div>
-                      </div>
-                    </div>
-                    <div class="ears">
-                      <div class="ear"></div>
-                      <div class="ear"></div>
-                    </div>
-                    <div class="hair"><div></div></div>
-                  </div>
-                </div>
+        </div>
+        <div id="microwave-wrapper">
+          <div id="microwave" class="animated">
+            <div class="door">
+              <div class="glass"></div>
+            </div>
+            <div class="panel">
+              <div class="timer">
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
               </div>
-              <div id="microwave-wrapper">
-                <div id="microwave" class="animated">
-                  <div class="door">
-                    <div class="glass"></div>
-                  </div>
-                  <div class="panel">
-                    <div class="timer">
-                      <div class="time"></div>
-                      <div class="time"></div>
-                      <div class="time"></div>
-                      <div class="time"></div>
-                      <div class="time"></div>
-                      <div class="time"></div>
-                      <div class="time"></div>
-                      <div class="time"></div>
-                      <div class="time"></div>
-                      <div class="time"></div>
-                      <div class="time"></div>
-                      <div class="time"></div>
-                      <div class="time"></div>
-                      <div class="time"></div>
-                      <div class="time"></div>
-                      <div class="time"></div>
-                    </div>
-                    <div class="control"></div>
-                    <div id="trigger" class="control">
-                      <div class="infos"></div>
-                    </div>
-                  </div>
-                </div>
-
+              <div class="control"></div>
+              <div id="trigger" class="control">
+                <div class="infos"></div>
               </div>
-      </div>
+            </div>
+          </div>
 
-	</div>
+        </div>
+      </div>  
+    </div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<script src="./js/app.js"></script>
-</body>
-</html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+  </html>
