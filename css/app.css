@@ -10,3 +10,11 @@
 	background-color: #fff;
 	
 }
+
+.navbar-brand {
+	height: auto;
+}
+
+.navbar-brand img {
+	height: 50px;
+}
