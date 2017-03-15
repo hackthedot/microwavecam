@@ -24,24 +24,27 @@ body {
     font-family: Courier, Monospace;
     padding: 30px;
 }
-#homer-micro-wrapper {
+.homer-micro-wrapper {
 	position: relative;
-	margin: 0 auto;
-	width: 100%;
 }
 #microwave-wrapper {
 	margin: 0 auto;
 	width:100%;
+	position:absolute;
+	left: 0px;
+  top: 364px;
+	overflow: hidden;
 }
 #microwave {
     margin: 0 auto;
     background: #FFF;
-    width: 370px;
+    width: 80%;
     height: 210px;
     border-radius: 10px;
     background: linear-gradient(to bottom, rgba(245, 245, 245, 1) 1%, rgba(254, 254, 254, 1) 5%, rgba(247, 247, 247, 1) 12%, rgba(235, 235, 235, 1) 13%, rgba(242, 242, 242, 1) 60%, rgba(186, 186, 186, 1) 90%, rgba(112, 112, 112, 1) 100%);
     position: relative;
     border-bottom: 2px solid #252525;
+		z-index: 200;
 }
 #microwave:after, #microwave:before {
     content:"";
@@ -65,7 +68,7 @@ body {
     position: relative;
 }
 .door {
-    width: 290px;
+    width: 80%;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.21) 0%, rgba(0, 0, 0, 0) 3%);
     border-radius: 10px 0px 0px 10px;
     border-right: 2px solid #4e4e4e;
@@ -84,7 +87,7 @@ body {
 }
 .glass {
     height: 150px;
-    width: 230px;
+    width: 80%;
     margin: 30px auto 0;
     border-radius: 10px;
     box-shadow: inset 0 0 15px #000, 2px 2px 2px #FFF;
@@ -126,7 +129,7 @@ body {
     }
 }
 .panel {
-    width: 78px;
+    width: 20%;
     background: linear-gradient(to left, rgba(0, 0, 0, 0.21) 0%, rgba(0, 0, 0, 0) 8%);
     border-radius: 0px 10px 10px 0px;
 }
@@ -155,7 +158,7 @@ body {
     }
 }
 .control {
-    width: 30px;
+    width: 40%;
     height: 30px;
     margin: 20px auto 0;
     position: relative;
@@ -201,12 +204,13 @@ body {
     background: #FFF;
     position: absolute;
     top: 5px;
-    left: 60px;
+    left: 20px;
     height: 20px;
     width: 0;
     line-height: 20px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
+		padding-left: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     opacity: 0;
 }
@@ -222,7 +226,7 @@ body {
     border-bottom: 10px solid transparent;
 }
 .infos:after {
-    content:"Click me!";
+    content:"Click!";
     overflow: hidden;
     display: block;
 }
@@ -234,7 +238,7 @@ body {
 }
 @keyframes bounce {
     to {
-        left: 65px;
+        left: 45px;
     }
 }
 #homer-wrapper {
