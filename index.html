@@ -7,18 +7,58 @@
   	<meta name="keywords" content="" />
 	<meta name="robots" content="" />
 	
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/app.css" rel="stylesheet" />
-	
-	<script type="text/javascript">
-	
-	</script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/app.css" rel="stylesheet" />
 	
 	<style type="text/css">
-	
+		html, body, .container-fluid, #mapView {
+	      padding: 0;
+	      margin: 0;
+	      height: 100%;
+	      width: 100%;
+	    }
+	    .navbar {
+	    	margin-bottom: 0;
+	    }
+	    .mapOverride #mapView .esri-popup__main-container {
+	    	height: 500px;
+	    	width: 500px;
+	    	max-height: 500px;
+	    	max-width: 500px;
+	    }
 	</style>
+
+	<link rel="stylesheet" href="https://js.arcgis.com/4.3/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.3/"></script>
+  <script>
+    require([
+      "esri/WebMap",
+      "esri/views/MapView",
+      "esri/widgets/Legend",
+      "dojo/domReady!"
+    ], function(WebMap, MapView, Legend) {
+
+      var webmap = new WebMap({
+        portalItem: {
+          id: "589ef7ea51094ae0a25e63a3837a8864"
+        }
+      });
+
+      var view = new MapView({
+        container: "mapView",
+        map: webmap,
+        zoom: 10
+      });
+            
+      var legend = new Legend({
+        view: view
+      });
+      
+      view.ui.add(legend, "top-right");
+    });
+   </script>
 </head>
-<body>
+<body class="mapOverride">
 	<div id="app" class="container-fluid">
 		
 		<nav class="navbar navbar-default">
@@ -32,7 +72,7 @@
             </button>
             <a class="navbar-brand" href="#">
 	            
-	            <img src="/images/microwavecam-logo.svg" />
+	            <img src="./images/microwavecam-logo.svg" />
 	            
             </a>
           </div>
@@ -43,13 +83,13 @@
         </div><!--/.container-fluid -->
       </nav>
       
-      <div id="map"></div>
+      <div id="mapView"></div>
       <div id="feed"></div>
 		
 	</div>
 	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<script src="/js/app.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="./js/app.js"></script>
 </body>
 </html>
