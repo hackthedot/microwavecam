@@ -1,7 +1,23 @@
 #app {
 
 	background-color: #ccc;
+	border-radius: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
 
+#app .navbar {
+  background-color: #fff;
+}
+
+.navbar-brand {
+height: auto;
+}
+
+.navbar-brand img {
+height: 50px;
 }
 body {
     background: #666;
