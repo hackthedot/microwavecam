@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Microwave Cam News</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="" />
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/app.css" rel="stylesheet" />
+  <link href="./css/homer.css" rel="stylesheet" />
+  <link href="./css/bootstrap_overrides.css" rel="stylesheet" />
+
+  <style type="text/css">
+
+  #feed {
+    width: 100%;
+    margin: 0 auto;
+  }
+  </style>
+</head>
+<body class="mapOverride">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <div id="app" class="container-fluid">
+
+    <nav class="navbar navbar-default">
+      <div class="">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="pull-left">
+            <a class="navbar-brand" href="#"><img src="./images/microwavecam-logo.svg" /></a>
+          </div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-center">
+            <li class="nav-item">
+              <a class="nav-link" href="./map.html">Feed</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./play.html">Kellyann</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./homer.html">Homer</a>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>
+
+    <div id="feed">
+      <h2 class="text-center">WE'RE COOKING NOW!</h2>
+
+      <div class="homer-micro-wrapper">
+        <div id="homer-wrapper">
+          <div id="homer">
+            <div class="body">
+              <div class="head">
+                <div class="eyebrows">
+                  <div class="eyebrow"></div>
+                  <div class="eyebrow"></div>
+                </div>
+                <div class="eyes">
+                  <div class="eye"><div class="iris"></div></div>
+                  <div class="eye"><div class="iris"></div></div>
+                </div>
+                <div class="nose"></div>
+                <div class="beard">
+                  <div class="mouth"></div>
+                  <div class="chin"></div>
+                </div>
+              </div>
+              <div class="ears">
+                <div class="ear"></div>
+                <div class="ear"></div>
+              </div>
+              <div class="hair"><div></div></div>
+            </div>
+          </div>
+        </div>
+        <div id="microwave-wrapper">
+          <div id="microwave" class="animated">
+            <div class="door">
+              <div class="glass"></div>
+            </div>
+            <div class="panel">
+              <div class="timer">
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+                <div class="time"></div>
+              </div>
+              <div class="control"></div>
+              <div id="trigger" class="control">
+                <div class="infos"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/homer.js"></script>
+  </body>
+  </html>

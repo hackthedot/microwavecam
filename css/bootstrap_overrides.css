@@ -1,28 +1,15 @@
-#app {
-
-	background-color: #ccc;
-	border-radius: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-}
-
 #app .navbar {
   background-color: #fff;
 }
 
 .navbar-brand {
-height: auto;
+ height: auto;
+ padding-top: 0;
+ padding-bottom: 0;
 }
 
 .navbar-brand img {
-height: 50px;
-}
-body {
-    background: #666;
-    font-family: Courier, Monospace;
-    padding: 30px;
+ height: 50px;
 }
 
 html, body, .container-fluid {
@@ -37,11 +24,22 @@ html, body, .container-fluid {
 }
 @media (min-width: 768px) {
   .navbar-nav>li>a {
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+  }
+  .thin .navbar {
+    min-height: 32px;
+  }
+  .thin .navbar-nav>li>a {
+      padding-top: 5px;
+      padding-bottom: 5px;
 
   }
   .navbar-nav>li:hover {
     background-color: #eee;
+  }
+  .thin .navbar-brand img {
+   height: 32px;
   }
 }
